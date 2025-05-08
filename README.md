@@ -1,18 +1,48 @@
-## Getting Started
+# Simulador de Algoritmos de Substituição de Páginas
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é um simulador escrito em Java para comparar o desempenho de diferentes algoritmos de substituição de páginas utilizados em sistemas operacionais com gerenciamento de memória virtual.
 
-## Folder Structure
+## 📌 Algoritmos Implementados
 
-The workspace contains two folders by default, where:
+- **FIFO (First-In, First-Out)**
+- **LRU (Least Recently Used)**
+- **Clock (Segunda Chance)**
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+> O algoritmo Ótimo foi removido por não ser viável em aplicações reais.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 🎯 Objetivo
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Simular o comportamento dos algoritmos e contar o número de faltas de página para uma sequência de páginas fornecida pelo usuário.
 
-## Dependency Management
+## 🧩 Estrutura
+```bash
+SimuladorPaginas/
+├── src/
+│ ├── Main.java
+│ ├── FIFO.java
+│ ├── LRU.java
+│ └── Clock.java
+├── README.md
+```
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Compile os arquivos:
+```
+javac *.java
+```
+
+Execute o programa:
+```
+java Main
+```
+Exemplo de uso:
+```
+Digite a sequência de páginas separadas por vírgula (ex: 1,2,3,4,1,2):
+7, 0, 1, 2, 0, 3, 0, 4, 2, 3
+Digite o número de quadros de página (ex: 3):
+3
+
+Resultados:
+FIFO - 8 faltas de página
+LRU - 7 faltas de página
+Clock - 7 faltas de página
+```
