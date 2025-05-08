@@ -11,7 +11,6 @@ class NFU {
         for (int pagina : paginas) {
             int indicePagina = -1;
 
-            // Verifica se a página já está na memória
             for (int i = 0; i < quadros; i++) {
                 if (memoria[i] == pagina) {
                     frequencia[i]++;
@@ -25,7 +24,6 @@ class NFU {
                 int menorFrequencia = Integer.MAX_VALUE;
                 int paginaParaSubstituir = -1;
 
-                // Encontra a página com menor frequência
                 for (int i = 0; i < quadros; i++) {
                     if (frequencia[i] < menorFrequencia) {
                         menorFrequencia = frequencia[i];
@@ -33,7 +31,6 @@ class NFU {
                     }
                 }
 
-                // Substitui a página
                 memoria[paginaParaSubstituir] = pagina;
                 frequencia[paginaParaSubstituir] = 1;
             }
