@@ -19,5 +19,7 @@ public class Main {
         System.out.println("FIFO - " + FIFO.simular(paginas, quadros) + " faltas de página");
         System.out.println("LRU - " + LRU.simular(paginas, quadros) + " faltas de página");
         System.out.println("Clock - " + Clock.simular(paginas, quadros) + " faltas de página");
+        System.out.println("NFU - " + NFU.simular(paginas, quadros) + " faltas de página");
+
     }
 }
