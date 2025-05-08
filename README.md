@@ -14,7 +14,7 @@ Este projeto é um simulador escrito em Java para comparar o desempenho de difer
 
 Simular o comportamento dos algoritmos e contar o número de faltas de página para uma sequência de páginas fornecida pelo usuário.
 
-## 🧩 Estrutura
+## 1. 🧩 Estrutura
 ```bash
 SimuladorPaginas/
 ├── src/
@@ -25,12 +25,12 @@ SimuladorPaginas/
 ├── README.md
 ```
 
-Compile os arquivos:
+## 2. Compile os arquivos:
 ```
 javac *.java
 ```
 
-Execute o programa:
+## 3. Execute o programa:
 ```
 java Main
 ```
