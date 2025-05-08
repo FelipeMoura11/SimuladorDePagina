@@ -7,23 +7,30 @@ Este projeto é um simulador escrito em Java para comparar o desempenho de difer
 - **FIFO (First-In, First-Out)**
 - **LRU (Least Recently Used)**
 - **Clock (Segunda Chance)**
+- **NFU (Not Frequently Used)**
 
 > O algoritmo Ótimo foi removido por não ser viável em aplicações reais.
 
 ## 🎯 Objetivo
 
-Simular o comportamento dos algoritmos e contar o número de faltas de página para uma sequência de páginas fornecida pelo usuário.
+O objetivo é simular os algoritmos e calcular o número de faltas de página que ocorrem durante a execução dos algoritmos, dado um número de quadros de página e uma sequência de páginas a serem carregadas.
 
-## 1. 🧩 Estrutura
-```bash
-SimuladorPaginas/
-├── src/
-│ ├── Main.java
-│ ├── FIFO.java
-│ ├── LRU.java
-│ └── Clock.java
-├── README.md
-```
+## Algoritmos Implementados
+FIFO (First In, First Out):
+
+A página mais antiga é a primeira a ser substituída quando ocorre uma falta de página.
+
+LRU (Least Recently Used):
+
+Substitui a página que foi menos recentemente usada, com base no histórico de uso.
+
+Clock (Second Chance):
+
+Uma abordagem intermediária entre FIFO e LRU, usando um "relógio" circular para rastrear páginas e dar uma segunda chance antes de substituí-las.
+
+NFU (Not Frequently Used):
+
+Substitui a página com a menor contagem de referências. Para cada página, um contador é mantido, que é incrementado cada vez que a página é acessada. A página com o contador mais baixo é a substituída quando ocorre uma falta de página.
 
 ## 2. Compile os arquivos:
 ```
